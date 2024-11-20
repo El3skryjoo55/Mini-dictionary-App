@@ -1,13 +1,133 @@
+/* General styles */
 body {
+  font-family: 'Arial', sans-serif;
+  background-color: rgba(68, 41, 41, 0.365);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Container styles */
+.app-container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.app-container:hover {
+  transform: scale(1.02);
+}
+
+/* Header styles */
+.header {
+  font-size: 2.5rem;
+  color: #4e73df;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Input field styles */
+.input-field {
+  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #4e73df;
+  outline: none;
+}
+
+/* Button styles */
+.search-button {
+  background-color: #4e73df;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #2e59d9;
+}
+
+/* Result styles */
+.result {
+  margin-top: 20px;
+  color: #333;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.result h2 {
+  font-size: 1.5rem;
+  color: #2e59d9;
+}
+
+.result p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* No result message styles */
+.no-result {
+  color: #e74a3b;
+  font-size: 1.1rem;
+}
+
+/* Footer styles */
+.footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: lighter;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Add this to result section in CSS */
+.meaning {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.meaning h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.meaning p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
